@@ -30,7 +30,7 @@ fastlane action
 
 fastlane提供了好多的action，包括证书的创建管理（cert），provisioning profile的创建管理（sigh， match），自动截图，打测试包上传到TestFilght，打线上包上传到App Store，通过各种各样的插件或者action打各种各样的包，打包之前之后进行各种操作等等。。。。由于我这里用到的东西比较少，更多的功能可以自行挖掘[fastlane actions](https://docs.fastlane.tools/actions/)
 
-###fastlane Plugins
+### fastlane Plugins
 
 fastlane通过各种插件可以拓展更多的功能[available plugins](https://docs.fastlane.tools/plugins/available-plugins/)
 
@@ -83,7 +83,7 @@ fastlane sigh -o “~/PP/” --adhoc
 
 接下来是打包脚本：
 
-```
+```Ruby
 # 平台，安卓还是iOS
 default_platform(:ios) 
 
