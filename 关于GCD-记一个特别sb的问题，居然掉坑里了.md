@@ -1,5 +1,5 @@
 在sunny的博客里看到这样一个面试题
-```
+```Objective-C
 //以下代码运行结果如何？
 
 - (void)viewDidLoad
