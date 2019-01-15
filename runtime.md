@@ -5,7 +5,7 @@
 `iOS`类扩展：`category`可以扩展类的方法，但是不能扩展类的属性，当我们想要给一个已经封装好的类添加属性，但是这个属性只是特定情况才会用到的，这时我们就可以通过`runtime`来通过分类给现有类添加属性了。
 首先使用runtime我们需要引入`<objc/runtime.h>`这个头文件然后代码如下  
 
-```
+``` Objective-C
 //Person.h
 
 @interface Person (name)
@@ -78,7 +78,7 @@ static const char *key = "name";
 
 说了这么多我自己都不知道自己在说什么了，下面我们来看代码，希望能通过代码说明白。。。  
 
-```
+```Objective-C
 //首先由Person类 Person.h, 声明方法run
 @interface Person : NSObject
 
@@ -175,7 +175,7 @@ iOS的消息转发机制大概就是这样了，我也不知道你们能不能�
 我们可以通过method_exchangeImplementations，来交换方法地址达到方法交换的目的
 假设有这样一个场景，我们在没有一个类的实现源码的情况下，想改变其中一个方法的实现，除了继承它重写、和借助类别重名方法之外，还有没有其他方法可以搞定呢，当然可以，我们可以用method_exchangeImplementations，在load方法中对类的方法用我们自己的实现来进行交换  
 
-```
+```Objective-C
 @implementation Person
 
 +(void)load{

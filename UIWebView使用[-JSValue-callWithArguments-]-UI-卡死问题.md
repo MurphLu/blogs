@@ -1,6 +1,6 @@
 最近一直在搞一个套壳的app，作为临时方案，并且为了能够使交互与安卓端统一，用的UIWebView，体验就不要说了，卡出翔。
 在使用UIWebView的时候出现了这样一个问题，当使用[ JSValue callWithArguments:]方法时，如果调用的js方法有alert，就会导致UI卡死，alert点击无效，然后一顿google，stackoverflow。最终找到了解决方案。
-```-Objective-C
+```Objective-C
 //假如你要调用的js方法名称为 “test”
 //先获取webView中js上下文
 self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];

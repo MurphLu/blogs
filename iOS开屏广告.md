@@ -2,7 +2,7 @@
 大概实现思路就是在  ```appdelegte```  中的  ```didFinishLaunchingWithOptions``` 方法中给 ```keyWindow``` 添加一个遮罩```View```，给```View```添加一个计时器，到指定时间将其从```keyWindow```上移除，如果需要其他效果如：点击广告图片跳转到广告详情页面之类的，可以在点击广告图片时发送一个通知，让其他```ViewController```进行跳转之类的（这部分就不用写了，我们主要讨论的是如何添加一个开屏广告）
 闲话少絮，下面是代码，其实很简单：
 
-```
+```Objective-C
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions{
 	//设置self.Window为keyWindow并显示
 	[self.window makeKeyAndVisible] // 第一步

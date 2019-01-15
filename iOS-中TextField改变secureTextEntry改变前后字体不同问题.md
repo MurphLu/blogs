@@ -6,7 +6,7 @@
 
 不知道为什么苹果默认在切换```secure```状态是要改变```TextField```的字体，其实在切换完secure状态变为非密文状态的时候默认给```TextField```设置下字体就好可以解决了，大概就是这样
 
-```
+```Objective-C
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *changeBtn;

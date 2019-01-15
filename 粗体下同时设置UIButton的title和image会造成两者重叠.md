@@ -6,7 +6,7 @@
 
 某些情况下你有不能直接给button的image设置一个很大的imageInsets，因为好多人都是正常模式下的啊，你一改正常模式下看起来就怪怪的了，这时候就得用代码来搞了啊，可以针对于粗体模式下的button修改一个比较大的imageInsets 来让它看起来正常一些，记得当时QA提这个bug的时候很是头大，不知道从哪里下手啊，然后当时貌似是通过打断点来看这两种模式下字体有什么不同，然后再去针对性的搞得，代码大概是这个样子  
 
-```
+```Swift
 //粗体模式下的字体是这个：.SFUIText-Semibold，正常的忘记是啥了，不过判断个这个就可以找到了，然后再设置btn的imageEdgeInsets就得以正常显示了
 if ([[UIFont systemFontOfSize:12].fontName isEqualToString:@".SFUIText-Semibold"]) {
         self.btn_diamond.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 10);

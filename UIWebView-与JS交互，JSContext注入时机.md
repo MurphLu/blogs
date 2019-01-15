@@ -3,7 +3,7 @@
 解决办法：
 创建一个NSObject的Category 命名为"NSObject+JSAdditional"
 添加方法
-```
+```Objective-C
 - (void)webView:(id)unuse didCreateJavaScriptContext:(JSContext *)ctx forFrame:(id)frame {
     [[NSNotificationCenter defaultCenter] postNotificationName:kWebviewCreateContext object:ctx];
 }
@@ -12,7 +12,8 @@
 在PrefixHeader中添加引用“NSObject+JSAdditional.h”
 WebView所在的ViewController中添加监听kWebviewCreateContext的方法
 最后在监听方法中添加要注入的方法，这样无论在WebView加载html的任何时机js都可以正常调用OC方法。
-```
+
+```Objective-C
 -(void)addContextFuncs:(NSNotification *)noti{
     JSContext *context = noti.object;
     self.context = context;

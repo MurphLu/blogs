@@ -1,7 +1,7 @@
 最近真的是各种奇葩需求各种提，单位恨不得每个产品都要单独搞一个App来支持，So每次打包提测都是超级痛苦，一次n多个包每个包又有两三个环境，每次搞得头都大了，于是研究了下持续集成，Jenkins这个最近很火的持续集成和持续交付工具当然是首选了。
-##安装
+## 安装
 对于安装我就不多说了，网上一搜一大堆，官方教程也很详细，直接去看就好了[Jenkins安装](https://jenkins.io/doc/pipeline/tour/getting-started/)
-###新建工程
+### 新建工程
 这个其实很多文章也都写的很详细了，登录后选择“新建”， 输入项目名称，选择“构建一个自由风格的软件项目”， 点击ok就好了
 ![新建项目.png](http://upload-images.jianshu.io/upload_images/1648999-e005c2bea06f0d50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -9,10 +9,10 @@
 
 ![建好的空项目.png](http://upload-images.jianshu.io/upload_images/1648999-03f83096535b72ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###General
+### General
 这里可以设置一些项目基本信息，构建后的项目保存的时间等等，这里就不过多介绍了，不是必填项，怎么感觉到现在为止还啥都写，一路略过来😂。。
 
-###源码管理
+### 源码管理
 这里可以设置None， Git， Svn
 
 None就不说了，没有源码管理，不必从网上check
@@ -25,16 +25,16 @@ SVN：
 ![svn.png](http://upload-images.jianshu.io/upload_images/1648999-57fbfd22542ef410.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-###构建触发
+### 构建触发
 这里可以通过一些方法自动触发构建操作，而不需要通过登录到jenkins手动触发构建，同样不多介绍
 
-###构建环境
+### 构建环境
 由于我在后边构建中使用的是shell，没有使用jenkins提供的插件，所以这一步没过多研究
 不过我发现在这里有些blog上使用插件构建的时候在选择“Keychains and Code Signing Identities”以及“Mobile Provisioning Profiles”这两个地方的描述有些不负责任。
 在升级到Sierra之后是无法获取到`login.keychain`的，`/Users/murphlu/Library/Keychains`目录下找到的只有`.keychain-db`文件，这个文件jenkins的插件是识别不到的(我找了好多人写的所谓的解决方法，并没有成功解决这个问题，如果有谁有亲测可行的方法也希望能指正)，这也是为啥我选择了使用xcodebuild在shell中直接写，而不是用jenkins的插件“Xcode integration”去实现自动打包。
 使用xcodebuild通过shell实现自动打包也是有好处的，可控性要高一些，我们可以知道我们每一步都在做什么。这一步同样略过。
 
-###构建
+### 构建
 
 敲黑板， 重点来了~~
 

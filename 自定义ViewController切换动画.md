@@ -42,7 +42,7 @@ class ViewController： UITableViewController, UIViewControllerTransitioningDele
 
 ```
 
-```
+```Swift
 //实现UIViewControllerAnimatedTransitioning协议的类，可以是任何类
 class MyAnimator: NSObject, UIViewControllerAnimatedTransitioning{
     //在初始化方法中设置初始值，用以判断是显示还是隐藏vc

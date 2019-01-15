@@ -1,6 +1,6 @@
 我们在开发中很多时候会遇到需要显示输入框的文本输入长度，一般就直接通过监听textField的文字改变并做处理就好了，但是有时候往往不注意就会出现小bug，如果只是这样写的话   
 
-```
+```Objective-C
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
@@ -25,7 +25,7 @@
 
 修改后的textDidChange方法大概是这样的
 
-```
+```Objective-C
 -(void)textDidChange:(NSNotification *)noti{
   //首先判断是否设置了最大长度，如果没有则直接返回
     if (self.maxLength == 0) {
