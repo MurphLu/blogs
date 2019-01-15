@@ -14,7 +14,7 @@
 
 下面我们来看一下三个代理方法的具体实现
 
-####alert
+#### alert
 
 ```Objective-C
 
@@ -31,7 +31,7 @@
 
 ```
 
-####confirm
+#### confirm
 
 ```Objective-C
 //作为js中confirm接口的实现，需要有提示信息以及两个相应事件， 确认及取消，并且在completionHandler中回传相应结果，确认返回YES， 取消返回NO
@@ -49,7 +49,7 @@
 }
 ```
 
-####prompt
+#### prompt
 
 ```Objective-C
 //作为js中prompt接口的实现，默认需要有一个输入框一个按钮，点击确认按钮回传输入值
