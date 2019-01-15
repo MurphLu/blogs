@@ -19,9 +19,9 @@
 >7、执行```source /Users/{用户名}/.bash_profile```，重新加载环境变量使修改生效
 >8、试试你拖进去的东西是不是可以用```Terminal```打开了~~~~
 
-![图1](http://upload-images.jianshu.io/upload_images/1648999-e79499e22360fc68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图1](img/0004-01.png)
 
-![图2](http://upload-images.jianshu.io/upload_images/1648999-8001d89d7e3c0fcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图2](img/0004-02.png)
 
 在网上也看到了用关闭```Rootless ```的方法可以实现解锁那些限制路径的修改，个人感觉非必须情况下还是不要解锁了，虽然安全问题可能涉及不到多少，但是系统级的东西我是能少修改就少修改，，胆小。。而且小白一个怕改东西改坏了就完蛋了.之前改环境变量就改坏过，还好有方法可以改回来
 当然你要是想解锁权限的话也很简单：  

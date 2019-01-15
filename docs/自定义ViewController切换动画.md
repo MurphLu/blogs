@@ -127,7 +127,7 @@ class MyAnimator: NSObject, UIViewControllerAnimatedTransitioning{
 动画效果就是这个样子的：：：
 
 
-![自定义动画](http://upload-images.jianshu.io/upload_images/1648999-7161de1cc4ffd4f9.gif?imageMogr2/auto-orient/strip)
+![自定义动画](img/0018-01.gif)
 
 
 示例代码：https://github.com/HiGodl/ViewControllerChangeAnim

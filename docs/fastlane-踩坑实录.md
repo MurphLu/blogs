@@ -192,7 +192,7 @@ Code Signing Error: Each does not support provisioning profiles. Each does not s
 post_install do |installer| installer.pods_project.build_configurations.each do |config| config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = '' end end
 ```
 具体的解释是这样的：
-![image.png](http://upload-images.jianshu.io/upload_images/1648999-dc9257a8acc3d584.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](img/0012-01.png)
 
 
 然后，在我的podfile中贴上了上面那段代码然后就神奇的好了。
