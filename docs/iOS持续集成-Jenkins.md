@@ -3,11 +3,11 @@
 对于安装我就不多说了，网上一搜一大堆，官方教程也很详细，直接去看就好了[Jenkins安装](https://jenkins.io/doc/pipeline/tour/getting-started/)
 ### 新建工程
 这个其实很多文章也都写的很详细了，登录后选择“新建”， 输入项目名称，选择“构建一个自由风格的软件项目”， 点击ok就好了
-![新建项目.png](docs/img/0003-01.png)
+![新建项目.png](img/0003-01.png)
 
 新建完之后界面大概就是这样的
 
-![建好的空项目.png](docs/img/0003-02.png)
+![建好的空项目.png](img/0003-02.png)
 
 ### General
 这里可以设置一些项目基本信息，构建后的项目保存的时间等等，这里就不过多介绍了，不是必填项，怎么感觉到现在为止还啥都写，一路略过来😂。。
@@ -18,11 +18,11 @@
 None就不说了，没有源码管理，不必从网上check
 Git：
 输入Url， Credentials， Branches就好了
-![git.png](docs/img/0003-03.png)
+![git.png](img/0003-03.png)
 
 SVN：
 跟git差不多
-![svn.png](docs/img/0003-04.png)
+![svn.png](img/0003-04.png)
 
 
 ### 构建触发
@@ -40,11 +40,11 @@ SVN：
 
 首先，如果是pod项目，可以通过添加 Update CocoaPods 确保在打包之前我们的 pod 是正常状态，当然如果每次都执行pod update过慢的话可以略过这一步，直接看下面
 
-![pod.png](docs/img/0003-05.png)
+![pod.png](img/0003-05.png)
 
 
 构建中我们选择“增加构建步骤” > “Execute shell”
-![新增构建步骤.png](docs/img/0003-06.png)
+![新增构建步骤.png](img/0003-06.png)
 
 在这里你可以自由发挥，终端的命令都可以用在这里，如果需要哪些东西可以现在终端测试通过了再直接粘过来。
 
@@ -101,19 +101,19 @@ xcodebuild -exportArchive -archivePath $SCHEME'.xcarchive' \
 mv './'$SCHEME'/'$DATE'/'$SCHEME'.ipa' './'$scheme'/'$DATE'/'$SCHEME''$VERSION_NUM.ipa
 ```
 最终整个shell看起来是这样的
-![shell.png](docs/img/0003-07.png)
+![shell.png](img/0003-07.png)
 
 
 读取证书的identity，直接拷出来就好了
 
-![image.png](docs/img/0003-08.png)
+![image.png](img/0003-08.png)
 
 描述文件：
 可以通过jenkins插件查看 “Keychains and Provisioning Profiles Management”这个插件
 在系统管理中找到这个插件
-![image.png](docs/img/0003-09.png)
+![image.png](img/0003-09.png)
 
-![image.png](docs/img/0003-10.png)
+![image.png](img/0003-10.png)
 
 
 exportOptionsPlist
@@ -132,7 +132,7 @@ key-要打包app的bundle ID
 value-要使用的描述文件的UUID或者名称
 可以添加多组值，用于多个项目打包
 
-![image.png](docs/img/0003-11.png)
+![image.png](img/0003-11.png)
 
 
 整个配置好之后我们就可以实现自动打包了，需要打包的时候我们可以分环境给项目设置多个target，然后就可以一次性打出好多包来，我们做的只是点一下等着打包结束就好了
