@@ -1,5 +1,7 @@
 ### blogs
 
+0019-[gem_install_permission问题](docs/gem_install_permission问题.md)
+
 > 因为此之前的文章是一起整理过来的所以排序较乱，之后的会按时间顺序
 
 0018-[自定义ViewController切换动画](docs/自定义ViewController切换动画.md)
