@@ -1,5 +1,7 @@
 ### blogs
 
+0021-[pbxproj 文档](docs/pbxproj.md)
+
 0020-[常用终端命令](docs/常用命令行.md)
 
 0019-[gem_install_permission问题](docs/gem_install_permission问题.md)
