@@ -1,8 +1,14 @@
 没什么事研究了一下自定义ViewController切换动画，主要就是主ViewController实现`UIViewControllerTransitioningDelegate`协议中的
 显示：
-```optional public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning?```,
+```Swift
+optional public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning?
+```
+
 隐藏：
-```func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?```
+```Swift
+func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
+```
+
 两个代理方法，在两个代理方法中返回实现了`UIViewControllerAnimatedTransitioning`协议的两个方法的自定义动画对象，闲话少絮，直接上代码，参照官方案例写的代码，做了小小的改动
 
 ```Swift
