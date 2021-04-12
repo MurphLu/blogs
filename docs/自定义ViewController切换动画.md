@@ -1,4 +1,5 @@
 没什么事研究了一下自定义ViewController切换动画，主要就是主ViewController实现`UIViewControllerTransitioningDelegate`协议中的
+
 显示：
 ```Swift
 optional public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning?
